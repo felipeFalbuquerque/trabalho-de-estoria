@@ -13,6 +13,21 @@
             padding: 0px;
         }
 
+        @font-face {
+            font-family: EB;
+            src: url(fonte/EB_Garamond/EBGaramond-VariableFont_wght.ttf);
+        }
+
+        @font-face {
+            font-family: Crimson;
+            src: url(fonte/Crimson_Text/CrimsonText-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: Garamond;
+            src: url(fonte/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf);
+        }
+
         :root {
             --cor-fundo: #FDF6E3;
             --cor-main: white;
@@ -20,6 +35,12 @@
             --cor-titulo: #7C3F00;
             --cor-destaque: #A67B5B;
             --cor-bimg: #D6C1A9;
+
+            --fonte-titulo: 'EB';
+            --fonte-texto: 'Crimson';
+            --fonte-destaque: 'Garamond';
+
+
         }
 
         body {
@@ -30,7 +51,6 @@
 
         main {
             background-color: var(--cor-main);
-            height: 100vh;
             width: 95vw;
         }
 
@@ -38,17 +58,55 @@
             padding: 10px;
             color: var(--cor-titulo);
             font-size: 2em;
+            font-family: var(--fonte-titulo);
         }
-        h2{
+
+        h2,
+        h3 {
             color: var(--cor-titulo);
+            font-family: var(--fonte-titulo);
+
         }
 
         .destaque {
             color: var(--cor-destaque);
+            font-family: var(--fonte-destaque);
+            font-weight: bolder;
         }
 
         section {
             padding: 10px;
+        }
+
+        p {
+            font-family: var(--fonte-texto);
+        }
+
+        li {
+            font-weight: bold;
+            padding: 10px;
+            list-style: none;
+            font-family: var(--fonte-texto);
+        }
+        table{
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.642)
+        }
+        td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            font-family: var(--fonte-texto);
+            font-weight: bold;
+        }
+        th{
+            border: 1px solid black;
+        }
+        table .td{
+            width: 25vw;
         }
     </style>
 </head>
@@ -56,149 +114,136 @@
 <body>
     <main>
         <section>
-            <!--Renascimento cultural-->
-            <h1 class="titulos">RENASCIMENTO CULTURAL</h1>
-            <article>
-                <p>
-                <h2>PRINCIPAIS CARACTERÍSTICAS:</h2>
-                <h3 class="destaque">Humanismo:</h3> valorização da dignidade humana, da inteligência, da educação e da
-                experiência individual.
-
-                <h3 class="destaque">Racionalismo:</h3> busca por explicações racionais e naturais para o mundo,
-                afastando-se das explicações religiosas.
-
-                <h3 class="destaque">Classicismo:</h3> imitação e reinterpretação da arte, literatura e arquitetura da
-                Grécia e Roma.
-
-                <h3 class="destaque">Secularização:</h3> a religião ainda era importante, mas não dominava todos os
-                aspectos da vida intelectual.
-
-                <h2>🖼️ NA ARTE:</h2>
-                <h3 class="destaque">Técnicas revolucionárias:</h3> perspectiva linear, claro-escuro, anatomia realista,
-                proporções matemáticas.
-
-                <h3 class="destaque">Temas:</h3> cenas mitológicas, retratos humanos com expressões emocionais,
-                paisagens naturais.
-
-                <h2>🔹 Artistas notáveis:</h2>
-                Giotto di Bondone: precursor, rompeu com o estilo rígido bizantino.
-
-                <h3 class="destaque">Leonardo da Vinci:</h3> pintor, inventor, engenheiro e anatomista. Obra-prima: Mona Lisa, A Última Ceia.
-
-                <h3 class="destaque">Michelangelo Buonarroti:</h3> escultor e pintor; famoso pela Capela Sistina e a estátua de Davi.
-
-                <h3 class="destaque">Rafael Sanzio:</h3> domínio da harmonia e beleza. Obra: Escola de Atenas.
-
-                <h3 class="destaque">Botticelli:</h3> O Nascimento de Vênus é símbolo da beleza ideal renascentista.
-
-                <h2>📚 NA LITERATURA:</h2>
-                A literatura renascentista refletia o humanismo, discutindo temas como moral, política, conhecimento e
-                crítica social.
-
-                <h2>🔹 Autores importantes:</h2>
-                <h3 class="destaque">Dante Alighieri (A Divina Comédia):</h3> ponte entre Idade Média e Renascimento.
-
-                <h3 class="destaque">Petrarca:</h3> poemas e ensaios com foco na experiência humana.
-
-                <h3 class="destaque">Boccaccio (Decamerão):</h3> crítica social com humor e realismo.
-
-                <h3 class="destaque">Erasmo de Rotterdam (Elogio da Loucura):</h3> crítica à Igreja e à hipocrisia social.
-
-                <h3 class="destaque">Thomas More (Utopia):</h3> proposta de uma sociedade racional e justa.
-                </p>
-            </article>
+            <h2>🌍 CONTEXTO HISTÓRICO DO RENASCIMENTO</h2>
+            <p>Antes de mergulhar nos três aspectos, é essencial entender o contexto histórico que possibilitou o
+                Renascimento:</p>
+            <ul>
+                <li>Queda de Constantinopla (1453):</li>
+                <p>muitos sábios bizantinos fugiram para a Europa Ocidental levando manuscritos gregos e romanos,
+                    reintroduzindo ideias da Antiguidade.</p> <br>
+                <li>Crise do feudalismo e fortalecimento da burguesia:</li>
+                <p>nas cidades, surgiu uma classe que valorizava o comércio, a razão e o progresso.</p> <br>
+                <li>Valorização do indivíduo:</li>
+                <p>diferentemente da Idade Média, que era teocêntrica (Deus no centro), o Renascimento foi
+                    antropocêntrico (o homem no centro).</p> <br>
+                <li>
+                    <p>Grandes Navegações e descobertas de novos mundos impulsionaram o desejo por conhecer, medir e
+                    dominar a natureza.</p> <br>
+                </li>
+                <li>Patrocínio artístico (mecenato):</li>
+                <p>famílias ricas (como os Médici, em Florença) financiavam artistas e intelectuais.</p>
+            </ul>
         </section>
+        <h2>1. RENASCIMENTO CULTURAL (ou artístico-literário)</h2>
+        <h3>📌 PRINCIPAIS CARACTERÍSTICAS:</h3>
+        <ul>
+            <li>Humanismo:</li>
+            <p>valorização da dignidade humana, da inteligência, da educação e da experiência individual.</p>
+            <li>Racionalismo:</li>
+            <p>busca por explicações racionais e naturais para o mundo, afastando-se das explicações religiosas.</p>
+            <li>Classicismo:</li>
+            <p>imitação e reinterpretação da arte, literatura e arquitetura da Grécia e Roma.
+            </p>
+            <li>Secularização:</li>
+            <p>a religião ainda era importante, mas não dominava todos os aspectos da vida intelectual.</p>
+            <h2>🖼️ NA ARTE:</h2>
+            <ul>
+                <li>Técnicas revolucionárias:</li>
+                <p>perspectiva linear, claro-escuro, anatomia realista, proporções matemáticas.</p> <br>
+                <li>Temas: </li>
+                <p> cenas mitológicas, retratos humanos com expressões emocionais, paisagens naturais.</p> <br>
+            </ul>
+        </ul>
+        <h3>🔹 Artistas notáveis:</h3>
+        <ul>
+            <li>Giotto di Bondone:</li>
+            <li>Leonardo da Vinci:</li>
+            <li>Michelangelo Buonarroti:</li>
+            <li>Rafael Sanzio:</li>
+            <li>Botticelli:</li>
+        </ul>
+        <h2>📚 NA LITERATURA:</h2>
+        <ul>
+            <li>A literatura renascentista refletia o humanismo, discutindo temas como moral, política, conhecimento e crítica social.
+            </li>
+        </ul>
+        <h3>🔹 Autores importantes:</h3>
+        <ul>
+            <li>Dante Alighieri (A Divina Comédia):</li>
+            <p>ponte entre Idade Média e Renascimento.</p> <br>
+            <li>Petrarca:</li>
+            <p>poemas e ensaios com foco na experiência humana.</p> <br>
+            <li>Boccaccio (Decamerão):</li>
+            <p> crítica social com humor e realismo.</p> <br>
+            <li>Erasmo de Rotterdam (Elogio da Loucura): </li> <p>crítica à Igreja e à hipocrisia social.</p> <br>
+            <li>Thomas More (Utopia):</li> <p>proposta de uma sociedade racional e justa.</p> <br>
+        </ul>
         <section>
-            <!--Renascimento Científico-->
-            <h1 class="titulos">RENASCIMENTO CIENTÍFICO</h1>
-            <article>
-                <p>
-                    O Renascimento viu a emancipação da ciência em relação à Igreja e aos dogmas medievais. O saber científico passou a se basear na observação empírica, na experimentação e no racionalismo matemático.
-
-📌 PRINCIPAIS MUDANÇAS:
-Ruptura com a escolástica medieval (saber baseado na fé e na autoridade).
-
-Sistema heliocêntrico (Sol no centro) substituiu o geocentrismo (Terra no centro).
-
-Criação do método científico.
-
-Desenvolvimento de novos campos como astronomia, física, medicina, anatomia, química, óptica e matemática.
-
-🔬 Cientistas e pensadores importantes:
-Nome	Contribuições
-Nicolau Copérnico	Propôs o heliocentrismo (Sol como centro do universo).
-Galileu Galilei	Telescópio, leis do movimento, defendeu o heliocentrismo; perseguido pela Inquisição.
-Johannes Kepler	Descobriu que as órbitas dos planetas são elípticas.
-Tycho Brahe	Observações astronômicas precisas (sem telescópio).
-Francis Bacon	Pai do método indutivo e do empirismo.
-René Descartes	Fundou o racionalismo moderno: “Penso, logo existo.”
-Andreas Vesalius	Anatomia moderna baseada na dissecação e observação direta.
-Paracelso	Revolucionou a medicina com o uso de compostos químicos.
-
-
-                </p>
-            </article>
+            <h2>🔬 2. RENASCIMENTO CIENTÍFICO</h2>
+            <p>O Renascimento viu a emancipação da ciência em relação à Igreja e aos dogmas medievais. O saber científico passou a se basear na observação empírica, na experimentação e no racionalismo matemático.</p>
+            <h3>📌 PRINCIPAIS MUDANÇAS:</h3>
+            <ul>
+                <li>Ruptura com a escolástica medieval (saber baseado na fé e na autoridade).</li>
+                <li>Sistema heliocêntrico (Sol no centro) substituiu o geocentrismo (Terra no centro).</li>
+                <li>Criação do método científico.</li>
+                <li>Desenvolvimento de novos campos como astronomia, física, medicina, anatomia, química, óptica e matemática.</li>
+            </ul>
+            <h3>🔬 Cientistas e pensadores importantes:</h3>
+            <table>
+                <thead>
+                    <th>Nome:</th>
+                    <th>Contribuições</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td">Nicolau Copérnico</td>
+                        <td>Propôs o heliocentrismo (Sol como centro do universo).</td>
+                    </tr>
+                    <tr>
+                        <td class="td">Galileu Galilei</td>
+                        <td>Telescópio, leis do movimento, defendeu o heliocentrismo; perseguido pela Inquisição.</td>
+                    </tr>
+                    <tr>
+                        <td class="td">Johannes Kepler</td>
+                        <td>Descobriu que as órbitas dos planetas são elípticas.</td>
+                    </tr>
+                    <tr>
+                        <td class="td">Tycho Brahe</td>
+                        <td>Observações astronômicas precisas (sem telescópio).</td>
+                    </tr>
+                    <tr>
+                        <td>Francis Bacon</td>
+                        <td>Pai do método indutivo e do empirismo.</td>
+                    </tr>
+                    <tr>
+                        <td>René Descartes</td>
+                        <td>Fundou o racionalismo moderno: “Penso, logo existo.”</td>
+                    </tr>
+                    <tr>
+                        <td>Andreas Vesalius</td>
+                        <td>Anatomia moderna baseada na dissecação e observação direta.</td>
+                    </tr>
+                    <tr>
+                        <td>Paracelso</td>
+                        <td>Revolucionou a medicina com o uso de compostos químicos.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
+            <h2>⚙️ 3. RENASCIMENTO TECNOLÓGICO</h2>
+            <h3>📌 AVANÇOS-CHAVE:</h3>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
         <section>
-            <!--Renascimento Tecnológico-->
-            <h1 class="titulos">RENASCIMENTO TECNOLÓGICO</h1>
-            <article>
-                <p>
-                    AVANÇOS-CHAVE:
-Imprensa de tipos móveis (Johannes Gutenberg, 1455):
 
-Tornou livros mais acessíveis.
-
-Ajudou a espalhar ideias humanistas, científicas e protestantes.
-
-Democratizou o conhecimento.
-
-Instrumentos de navegação:
-
-Bússola, astrolábio, quadrante e caravelas permitiram a expansão marítima.
-
-Facilitou a exploração da África, Ásia e América.
-
-Relógios mecânicos:
-
-Ajudaram a medir o tempo com precisão, essencial para a vida urbana e científica.
-
-Óptica:
-
-Desenvolvimento de telescópios (Galileu) e microscópios (Leeuwenhoek).
-
-Avanços na física da luz e lentes.
-
-Armas de fogo e pólvora:
-
-Mudaram as estratégias militares e enfraqueceram o poder dos castelos e cavaleiros feudais.
-
-Técnicas de pintura e engenharia:
-
-Leonardo da Vinci projetou máquinas, pontes, armas, paraquedas, helicópteros e muito mais — muitos à frente de seu tempo.
-                </p>
-            </article>
         </section>
+
         <section>
-            <!--Impactos Gerais do Renascimento-->
-            <h1 class="titulos">IMPACTOS GERAIS DO RENASCIMENTO</h1>
-            <article>
-                <p>
-                    Revolução cultural: valorização do pensamento crítico e da liberdade criativa.
 
-Educação: surgimento das universidades modernas com ensino baseado em ciência e razão.
-
-Crítica à autoridade eclesiástica: preparação para a Reforma Protestante.
-
-Início da ciência moderna: com base em observação, experimentação e raciocínio lógico.
-
-Formação do espírito moderno europeu: mais racional, progressista e autônomo.
-
-
-                </p>
-            </article>
         </section>
     </main>
 </body>
-
-</html>
